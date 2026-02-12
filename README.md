@@ -70,7 +70,7 @@ If you need to test commands or inspect the internal state of the kernel and fil
 
 For a deep dive into the system design, communication protocols, and P2P logic, please refer to the technical documentation:
 
-* **[Architecture & Design Document](https://www.google.com/search?q=./docs/Documentation.pdf)** *
+* **[Architecture & Design Document](https://www.google.com/search?q=https://github.com/AbhiT212/Mini-distributed-operating-system/blob/main/docs/Documentation.pdf)** *
 ---
 
 ## 🔐 Troubleshooting
