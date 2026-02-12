@@ -70,8 +70,7 @@ If you need to test commands or inspect the internal state of the kernel and fil
 
 For a deep dive into the system design, communication protocols, and P2P logic, please refer to the technical documentation:
 
-* **[Architecture & Design Document](https://www.google.com/search?q=./docs/architecture_details.pdf)** *(Note: Ensure your PDF is located in the `docs/` folder for this link to work.)*
-
+* **[Architecture & Design Document](https://www.google.com/search?q=./docs/Documentation.pdf)** *
 ---
 
 ## 🔐 Troubleshooting
