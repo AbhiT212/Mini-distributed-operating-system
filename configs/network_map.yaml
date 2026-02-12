@@ -1,0 +1,27 @@
+# Static Network Map (Optional)
+# Use this file if you want to manually specify peer nodes
+# instead of relying on automatic discovery
+
+peers:
+  - name: "NODE-01"
+    ip: "192.168.1.100"
+    port: 9000
+    
+  - name: "NODE-02"
+    ip: "192.168.1.101"
+    port: 9000
+    
+  - name: "NODE-03"
+    ip: "192.168.1.102"
+    port: 9000
+
+# Network Configuration
+network:
+  subnet: "192.168.1.0/24"
+  gateway: "192.168.1.1"
+  
+# Discovery Settings
+discovery:
+  broadcast_address: "192.168.1.255"
+  ttl: 64
+

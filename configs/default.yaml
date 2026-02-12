@@ -1,0 +1,67 @@
+# MiniDOS Node Configuration
+
+# Node Identity
+node:
+  name: "Abhi"  # Change this for each node (NODE-01, NODE-02, etc.)
+  id: "auto"       # Auto-generate unique ID or set manually
+
+# Network Configuration
+network:
+  tcp_port: 9000              # Main communication port
+  discovery_port: 9050        # UDP broadcast port for peer discovery
+  bind_address: "0.0.0.0"     # Listen on all interfaces
+  discovery_enabled: true     # Enable automatic peer discovery
+  heartbeat_interval: 5       # Seconds between heartbeats
+  reconnect_timeout: 30       # Seconds before considering peer dead
+
+# Static Peers (used if discovery is disabled or as fallback)
+peers:
+    - "172.17.91.159:9000"
+    - "172.17.91.139:9000"
+  # - "192.168.1.100:9000"
+  # - "192.168.1.101:9000"
+  # - "192.168.1.102:9000"
+
+# File System Configuration
+filesystem:
+  root_path: "C:\\MiniDOS_FS"     # Global replicated directory
+  metadata_db: "metadata.db"      # SQLite database for file versions
+  enable_watcher: true            # Watch for local file changes
+  sync_on_startup: true           # Sync with peers on startup
+  conflict_resolution: "timestamp"  # timestamp | version | manual
+
+# Sync Engine
+sync:
+  batch_size: 10              # Number of files to sync in one batch
+  chunk_size: 1048576         # 1MB chunks for large files
+  verify_checksums: true      # Verify file integrity
+  max_sync_threads: 3         # Parallel sync operations
+  resync_interval: 300        # Full resync every 5 minutes (0 to disable)
+
+# Process Monitoring
+monitoring:
+  enabled: true
+  update_interval: 2          # Seconds between process list updates
+  cpu_threshold: 90.0         # Alert threshold for CPU usage
+  memory_threshold: 90.0      # Alert threshold for memory usage
+
+# Logging
+logging:
+  level: "INFO"               # DEBUG | INFO | WARNING | ERROR
+  max_file_size: 10485760     # 10MB per log file
+  backup_count: 5             # Keep 5 rotated log files
+  console_output: true        # Also output logs to console
+
+# Security
+security:
+  require_admin: true         # Require administrator privileges
+  allow_external: false       # Only allow LAN connections
+  encryption: false           # Enable message encryption (future)
+
+# Performance
+performance:
+  max_connections: 10         # Maximum peer connections
+  socket_timeout: 30          # Socket timeout in seconds
+  buffer_size: 8192           # Network buffer size
+  cache_metadata: true        # Cache file metadata in memory
+
